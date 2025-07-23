@@ -1,0 +1,105 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+        font-family: Arial;
+        background: #f7f7f7;
+
+    }
+a{
+    text-decoration: none;
+    color:black;
+}
+.text-left{
+  text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+
+.logos-mini{
+    width:50px;
+    height: auto;
+    
+}
+
+.text-fumace{
+  text-shadow: 2px 2px 12px orange;
+}
+
+.text-maiusculo{
+    text-transform: uppercase;
+}
+.logos-media{
+    width:150px;
+    height: auto;
+    object-fit: cover;
+    
+
+}
+.logos-micro{
+    width: auto;
+    height: 8 px;
+    object-fit: cover;
+    padding-right:5px;
+}
+
+.hero {
+   /*background: linear-gradient(to bottom, rgba(0,0,0,0), rgb(249, 231, 142), rgba(0,0,0,0)); */
+    padding: 40px ;
+    text-align: center;
+    color: #050505;
+    line-height: 40px;
+}
+
+
+.hero a.botoes-verdes {
+    font-size: 18px;
+    padding: 12px 24px;
+    
+}
+
+.formatos-preview {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px auto;
+    max-width: 960px;
+    flex-wrap: wrap;
+}
+
+.formato-box {
+
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+}
+
+.formato-box img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.formato-box h3 {
+    margin-top: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  a {
+    font-size: 95%;
+  }
+}

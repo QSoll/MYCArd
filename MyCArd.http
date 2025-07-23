@@ -1,0 +1,6 @@
+@MyCArd_HostAddress = http://localhost:5014
+
+GET {{MyCArd_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

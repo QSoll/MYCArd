@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mycard:
+    image: mycard-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    restart: unless-stopped

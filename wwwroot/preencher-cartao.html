@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Criar cartão</title>
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/botoes.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="css/site.css" />
+		<link rel="stylesheet" href="css/card-vertical.css" />
+	</head>
+	<body>
+		<header class="banner-tropical">
+			<div class="banner-container">
+				<img
+					src="imgs/banner1.jpg"
+					alt="Banner MyCArd"
+					class="banner-topo banner-card"
+				/>
+			</div>
+
+			<nav class="menu-navegacao">
+				<a href="/index.html " class="botoes botoes-verdes">Home</a>
+				<a href="/preencher-cartao.html" class="botoes botoes-verdes"
+					>Criar Card</a
+				>
+			</nav>
+		</header>
+
+		<main class="container">
+			<form class="formulario-cartao">
+				<h1 class="h1-titulo">Preencha seu Cartão</h1>
+				<p>Escolha uma foto do seu dispositivo</p>
+				<br />
+
+				<div class="linha-formulario largura-143">
+					<label for="avatar"> </label>
+					<input type="file" id="avatar" name="avatar" accept="image/*" />
+				</div>
+				<br />
+
+				<div class="linha-formulario">
+					<label for="nome"> </label>
+					<input
+						type="text"
+						id="nome"
+						name="nome"
+						placeholder="Seu nome"
+						required
+					/>
+				</div>
+
+				<div class="linha-formulario">
+					<label for="bio"> </label>
+					<textarea
+						id="bio"
+						name="bio"
+						placeholder="Descrição, bio, graduação, cargo, etc"
+					></textarea>
+				</div>
+
+				<div class="linha-formulario">
+					<label for="site"></label>
+					<input
+						type="url"
+						id="Url do seu site ou blog"
+						name="site"
+						placeholder="Seu site ou blog https://solmorcillo.com.br"
+					/>
+				</div>
+
+				<div class="linha-formulario">
+					<label for="email"> </label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Seu melhor e-mail"
+					/>
+				</div>
+
+				<div class="linha-formulario">
+					<img
+						src="imgs/logo_linkedin.jpg"
+						alt="LinkedIn"
+						class="logo-social"
+					/>
+					<input type="text" name="linkedin" placeholder="Seu Linkedin" />
+				</div>
+
+				<div class="linha-formulario">
+					<img
+						src="imgs/logo_instagram.png"
+						alt="Instagram"
+						class="logo-social"
+					/>
+					<input type="text" name="instagram" placeholder="Seu Instagram" />
+				</div>
+				<div class="linha-formulario">
+					<img src="imgs/logo_youtube.png" alt="Youtube" class="logo-social" />
+					<input type="text" name="youtube" placeholder="Seu Youtube" />
+				</div>
+
+				<div class="linha-formulario">
+					<img src="imgs/logo_github.png" alt="GitHub" class="logo-social" />
+					<input type="text" name="github" placeholder="Seu Github" />
+				</div>
+
+				<div class="linha-formulario">
+					<img
+						src="imgs/logo_whatsapp.png"
+						alt="WhatsApp"
+						class="logo-social"
+					/>
+					<input type="tel" name="whatsapp" placeholder="(00) 0000-0000" />
+				</div>
+
+				<div class="btn-criar">
+					<button type="submit" class="botoes botoes-verdes">CRIAR</button>
+				</div>
+			</form>
+		</main>
+
+		<!-- Rodapé compartilhado -->
+
+		<div id="footer-compartilhado"></div>
+		<script>
+			fetch("shared/footer.html")
+				.then((res) => {
+					if (!res.ok) throw new Error("Erro ao carregar footer");
+					return res.text();
+				})
+				.then((html) => {
+					document.getElementById("footer-compartilhado").innerHTML = html;
+				})
+				.catch((err) => console.error("Falha no footer:", err));
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+		<script>
+			document
+				.getElementById("cartao-form")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+
+					const formData = new FormData(this);
+					const nome = formData.get("nome") || "Sem nome";
+					const bio = formData.get("bio") || "";
+					const email = formData.get("email") || "";
+					const github = formData.get("github") || "";
+					const linkedin = formData.get("linkedin") || "";
+					const instagram = formData.get("instagram") || "";
+					const whatsapp = formData.get("whatsapp") || "";
+					const corTopo = formData.get("corTopo") || "#f0f0f0";
+					const corBase = formData.get("corBase") || "#ffffff";
+					const avatar = formData.get("avatar");
+
+					const preview = document.getElementById("cartao-preview");
+					preview.innerHTML = `
+        <div style="background:${corTopo}; padding:20px; border-radius:12px 12px 0 0; text-align:center;">
+          <div id="avatar-preview"></div>
+          <h2 style="margin-top:10px;">${nome}</h2>
+        </div>
+        <div style="background:${corBase}; padding:20px; border-radius:0 0 12px 12px;">
+          ${bio ? `<p><em>${bio}</em></p>` : ""}
+          ${email ? `<p>Email: <a href="mailto:${email}">${email}</a></p>` : ""}
+          ${
+						github
+							? `<p><img src="/imgs/icon-github.png" style="width:18px;"> <a href="${github}" target="_blank">GitHub</a></p>`
+							: ""
+					}
+          ${
+						linkedin
+							? `<p><img src="/imgs/icon-linkedin.png" style="width:18px;"> <a href="${linkedin}" target="_blank">LinkedIn</a></p>`
+							: ""
+					}
+          ${
+						instagram
+							? `<p><img src="/imgs/icon-instagram.png" style="width:18px;"> <a href="${instagram}" target="_blank">Instagram</a></p>`
+							: ""
+					}
+          ${
+						whatsapp
+							? `<p><img src="/imgs/icon-whatsapp.png" style="width:18px;"> <a href="${whatsapp}" target="_blank">WhatsApp</a></p>`
+							: ""
+					}
+          <div style="margin-top: 16px;">
+            <button onclick="copiarCartao()" class="botoes-verdes">Copiar como Assinatura</button>
+            <button onclick="exportarImagem()" class="botoes-verdes">Exportar como Imagem</button>
+            <button onclick="redirecionar()" class="botoes-verdes">Avançar para Compartilhar</button>
+          </div>
+        </div>
+      `;
+
+					if (avatar && avatar.size > 0) {
+						const reader = new FileReader();
+						reader.onload = function (event) {
+							document.getElementById("avatar-preview").innerHTML = `
+            <img src="${event.target.result}" class="avatar" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:4px solid #0077cc; box-shadow:0 0 8px rgba(0,0,0,0.1);">
+          `;
+						};
+						reader.readAsDataURL(avatar);
+					}
+				});
+
+			function copiarCartao() {
+				const html = document.getElementById("cartao-preview").innerHTML;
+				const temp = document.createElement("textarea");
+				temp.value = html;
+				document.body.appendChild(temp);
+				temp.select();
+				document.execCommand("copy");
+				document.body.removeChild(temp);
+				alert("Cartão copiado! Cole no Gmail ou onde desejar.");
+			}
+
+			function exportarImagem() {
+				const cartao = document.getElementById("cartao-preview");
+				html2canvas(cartao).then((canvas) => {
+					const link = document.createElement("a");
+					link.download = "meu-cartao.png";
+					link.href = canvas.toDataURL("image/png");
+					link.click();
+				});
+			}
+
+			function redirecionar() {
+				window.location.href = "/compartilhar-card.html";
+			}
+		</script>
+
+		<script>
+			document
+				.querySelector(".formulario-cartao")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+
+					sessionStorage.setItem("nome", document.getElementById("nome").value);
+					sessionStorage.setItem("bio", document.getElementById("bio").value);
+					sessionStorage.setItem(
+						"email",
+						document.getElementById("email").value
+					);
+					sessionStorage.setItem(
+						"telefone",
+						document.getElementById("telefone").value
+					);
+
+					const avatarInput = document.getElementById("avatar");
+					if (avatarInput.files[0]) {
+						const reader = new FileReader();
+						reader.onload = function () {
+							sessionStorage.setItem("avatar", reader.result);
+							window.location.href = "compartilhar-card.html";
+						};
+						reader.readAsDataURL(avatarInput.files[0]);
+					} else {
+						window.location.href = "compartilhar-card.html";
+					}
+				});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>MyCard · Sua Identidade Digital</title>
+		<link rel="stylesheet" href="css/site.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="css/botoes.css" />
+		<link rel="stylesheet" href="css/cards-prontos.css" />
+	</head>
+	<body>
+		<!-- Cabeçalho -->
+
+		<header class="banner-tropical">
+			<div class="banner-container">
+				<img src="imgs/banner1.jpg" alt="Banner MyCArd" class="banner-topo" />
+			</div>
+
+			<nav class="menu-navegacao">
+				<a href="/index.html " class="botoes botoes-verdes">Home</a>
+				<a href="/preencher-cartao.html" class="botoes botoes-verdes"
+					>Criar Card</a
+				>
+			</nav>
+		</header>
+
+		<!-- Apresentação principal -->
+		<div class="hero">
+			<h1 class="botoes-discretos">Bem-vindo ao MyCArd</h1>
+			<h2 class="botoes-discretos">Seu cartão de apresentação virtual</h2>
+			<h3 class="botoes-discretos">
+				Crie e faça download, compartilhe ou use como assinatura no seu e-mail
+			</h3>
+			<p class="botoes-discretos">
+				Personalize, exporte e leve sua identidade para o mundo.
+			</p>
+		</div>
+
+ 
+
+<div class="card-vertical">
+  
+  <!-- Foto à direita -->
+  <div class="coluna-foto">
+    <div class="foto-card-vertical">
+      <img src="imgs/sol1.jpg" alt="Foto de perfil" class="photo-format">
+    </div>
+  </div>
+
+  <!-- Conteúdo à esquerda -->
+  <div class="coluna-linhas">
+
+    <div class="linha r1">
+      <div class="coluna"><h1 class="linha-centralizada">Sol Morcillo</h1></div>
+    </div>
+
+    <div class="linha r2">
+      <div class="coluna">
+        <h2> <img src="imgs/logo_whatsapp.png" class="logos-micro">28 99945-2754</h2>
+      </div>
+      <div class="coluna">
+        <h2>sol.morcillo.dev@gmail.com</h2>
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="coluna">
+        <h2><img src="imgs/logo_linkedin.jpg" class="logos-micro"> solmorcillo</h2>
+      </div>
+      <div class="coluna">
+        <h2><img src="imgs/logo_instagram.png" class="logos-micro"> @sol_morcillo</h2>
+      </div>
+      <div class="coluna">
+        <h2><img src="imgs/logo_youtube.png" class="logos-micro"> @SolMorcillo</h2>
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="coluna linha-centralizada">
+        <h2>TECNÓLOGO SISTEMAS DE INFORMAÇÃO</h2>
+      </div>
+    </div>
+
+    <div class="linha r5 ">
+      <div class="coluna linha-centralizada">
+        <h2>Web Developer e Designer - Designer de moda e professora</h2>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+		<!-- Rodapé compartilhado -->
+
+		<div id="footer-compartilhado"></div>
+		<script>
+			fetch("shared/footer.html")
+				.then((res) => {
+					if (!res.ok) throw new Error("Erro ao carregar footer");
+					return res.text();
+				})
+				.then((html) => {
+					document.getElementById("footer-compartilhado").innerHTML = html;
+				})
+				.catch((err) => console.error("Falha no footer:", err));
+		</script>
+	</body>
+</html>

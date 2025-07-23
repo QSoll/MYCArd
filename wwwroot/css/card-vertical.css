@@ -1,0 +1,97 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  padding-top: 50px;
+    
+}
+ .h1-titulo{
+    padding-bottom:50px;
+ }
+.formulario-cartao{
+    width:60%;
+}
+
+/*inserção de fotos*/
+.largura-143{
+    width:143px;
+    margin: auto;
+}
+.formulario-cartao button {
+    width:100%;
+  padding: 14px;
+  background: #e49949;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+.linha-formulario {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 16px;
+  
+}
+
+.linha-formulario label {
+  width: 0px;
+  font-weight: normal; /* negrito removido */
+}
+
+.linha-formulario input,
+.linha-formulario textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  justify-content: space-evenly;
+}
+
+
+
+.linha-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.logo-social {
+  width: 28px;
+  height: 28px;
+}
+
+.linha-social input {
+  flex: 1;
+  max-width: 300px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.btn-criar{
+    width:80px;
+    margin: auto;
+ 
+  display: block;
+  
+  padding: 12px 24px;
+
+
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom:35px;
+}
+  
+
+
+
+
