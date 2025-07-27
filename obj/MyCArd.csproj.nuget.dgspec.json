@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sol2022\\_trabalhando\\MyCArd\\MyCArd.csproj": {}
+    "C:\\Users\\Sol2022\\_trabalhando\\MYCArd\\MyCArd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sol2022\\_trabalhando\\MyCArd\\MyCArd.csproj": {
+    "C:\\Users\\Sol2022\\_trabalhando\\MYCArd\\MyCArd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sol2022\\_trabalhando\\MyCArd\\MyCArd.csproj",
+        "projectUniqueName": "C:\\Users\\Sol2022\\_trabalhando\\MYCArd\\MyCArd.csproj",
         "projectName": "MyCArd",
-        "projectPath": "C:\\Users\\Sol2022\\_trabalhando\\MyCArd\\MyCArd.csproj",
+        "projectPath": "C:\\Users\\Sol2022\\_trabalhando\\MYCArd\\MyCArd.csproj",
         "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sol2022\\_trabalhando\\MyCArd\\obj\\",
+        "outputPath": "C:\\Users\\Sol2022\\_trabalhando\\MYCArd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config"

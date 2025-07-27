@@ -1,0 +1,319 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    text-align: center;
+}
+
+/*
+.caixa-info {
+    width: 100%;
+    margin: 60px 0;
+    line-height: 20px;
+}*/
+
+/* Ícones pequenos ao lado dos links */
+.icones-p {
+    height: 16px;
+    width: auto;
+    /*padding-right: 5px;*/
+    vertical-align: middle;
+}
+
+/* Container principal do card */
+.container-card-horiz-1 {
+    width: 100%;
+    padding: 20px 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+
+
+}
+
+/* Grid principal do card */
+.grid-card-horizontal-1 {
+    width: 95%;
+    align-items: stretch;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    height: auto;
+    border: 3px solid transparent;
+    border-radius: 90px 0px 0px 90px;
+    background-color: transparent;
+    display: grid;
+    justify-content: center;
+    grid-row: auto / span 1; /*mantém as linhas da mesma altura mesmo vazias*/
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        'foto-h-1 foto-h-1 nome-h-1 nome-h-1 nome-h-1 nome-h-1'
+        'foto-h-1 foto-h-1 whatsapp-h-1 whatsapp-h-1 site-h-1 site-h-1'
+        'foto-h-1 foto-h-1 email-h-1 email-h-1 email-h-1 email-h-1'
+        'foto-h-1 foto-h-1 lk-h-1 lk-h-1 gt-h-1 gt-h-1'
+        'foto-h-1 foto-h-1 in-h-1 in-h-1 th-h-1 th-h-1'
+        'foto-h-1 foto-h-1 yo-h-1 yo-h-1 fa-h-1 fa-h-1'
+        'foto-h-1 foto-h-1 graduacao-h-1 graduacao-h-1 graduacao-h-1 graduacao-h-1'
+        'foto-h-1 foto-h-1 cargo-h-1 cargo-h-1 cargo-h-1 cargo-h-1'
+        'foto-h-1 foto-h-1 descricao-h-1 descricao-h-1 descricao-h-1 descricao-h-1';
+
+
+}
+
+/*
+.espaco-magico{/*para não ter linhas vazias com altura diferente das outras*
+    color:white;
+    font-size: smaller;
+ 
+}*/
+/* FOTO */
+.foto-h-1 {
+    width: 100%;
+    grid-area: foto-h-1;
+    /*background-color: transparent;*/
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 90px 0px 0px 90px;
+
+}
+
+.h-1-foto-topo {
+    width: 100%;
+    display: inline-block;
+    border: 3px solid transparent;
+    border-radius: 90px 0px 0px 90px;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+
+}
+
+.foto-card-h-1 {
+    width: 100%;
+    max-width: 480px;
+    max-height: 650px;
+
+    height: auto;
+    object-fit: cover;
+    background-color: transparent;
+    border-radius: 90px 0px 0px 90px;
+
+    object-fit: scale-down;
+
+}
+
+.h-1-logo-sobre-foto {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    width: 30px;
+    height: auto;
+    background-color: transparent;
+    opacity: 0.9;
+
+}
+
+/*abaixo colocado para teste, mas ficou uma bolinha pequena/
+#foto-perfil-h-1 {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+/*acima colocado para teste*
+.campo-dado:empty::before {
+  content: " ";
+  visibility: hidden;
+}não deu certo*/
+
+/* ÁREAS DE TEXTO */
+.email-h-1,
+.nome-h-1,
+.whatsapp-h-1,
+.site-h-1,
+.graduacao-h-1,
+.cargo-h-1,
+.descricao-h-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.nome-h-1 {
+    grid-area: nome-h-1;
+
+    width: 100%;
+    text-align: center;
+}
+
+.whatsapp-h-1 {
+    grid-area: whatsapp-h-1;
+
+}
+
+.site-h-1 {
+    grid-area: site-h-1;
+
+}
+
+.email-h-1 {
+    grid-area: email-h-1;
+}
+
+.lk-h-1 {
+    grid-area: lk-h-1;
+}
+
+.gt-h-1 {
+    grid-area: gt-h-1;
+}
+
+.in-h-1 {
+    grid-area: in-h-1;
+}
+
+.th-h-1 {
+    grid-area: th-h-1;
+    align-items: stretch;
+}
+
+.yo-h-1 {
+    grid-area: yo-h-1;
+}
+
+.fa-h-1 {
+    grid-area: fa-h-1;
+}
+
+.graduacao-h-1 {
+    grid-area: graduacao-h-1;
+}
+
+.cargo-h-1 {
+    grid-area: cargo-h-1;
+}
+
+.descricao-h-1 {
+    grid-area: descricao-h-1;
+}
+
+/* FORMATAÇÃO DE BLOCOS */
+.grid-card-horizontal-1>div {
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
+    text-align: left;
+    display: flex;
+    align-items: left;
+}
+
+.linha-h-1 {
+    background-color: white;
+    border: 1px solid transparent;
+    padding: 2px 0px;
+    padding-left: 4px;
+    margin: 1px;
+    gap: 1px;
+    align-items: center;
+}
+
+.lin-inteira-h-1 {
+    width: 100%;
+    /*padding: 25px 5px;*/
+    text-align: left;
+}
+
+.linha-h-1-transp {
+    border: 1px solid transparent;
+    padding: 7px 0px;
+    padding-left: 4px;
+    margin: 1px;
+    gap: 1px;
+}
+
+/* botoes para cards horizontal e vertical: download + compartilhar */
+.btn-hv-flex {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    /* Alinha com espaçamento */
+    align-items: center;
+    /* Centraliza verticalmente */
+
+}
+
+/* Cada bloco: Download ou Compartilhar sobre os botoes */
+.btn-hv-inline {
+    display: flex;
+    /* ESSENCIAL: muda de 'inline' para 'flex' */
+    flex-direction: column;
+    /* imagem em cima, botões embaixo */
+    align-items: center;
+    text-align: center;
+    /*width: 280px;  */
+    /* Mantém alinhamento lateral */
+}
+
+/* Imagem acima dos botões */
+.btn-hv-inline img {
+    width: 40px;
+    height: auto;
+
+    /* margin-bottom: 1rem;*/
+}
+
+/* Div que contém botões lado a lado */
+.do-lado-flex {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    /* Impede quebra de linha */
+
+}
+
+/*final botoes*/
+
+/* RESPONSIVO*/
+@media (max-width: 600px) {
+    .foto-card-h-1 {
+        width: 450vw;
+        height: 250vh;
+        /* aumenta 10% da altura da tela */
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .grid-card-horizontal {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .nome-h-1,
+    .email-h-1,
+    .graduacao-h-1,
+    .cargo-h-1,
+    .descricao-h-1 {
+        font-size: clamp(0.3rem, 1.5vw, 0.7rem);
+        padding-block: 0.05rem;
+        line-height: 1.0;
+    }
+}

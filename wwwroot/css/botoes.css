@@ -1,37 +1,65 @@
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(60, 195, 58);
+  color: white;
+  padding:20px;
+  margin: 10px;
+  gap:20px;
 
-.botoes{
-  padding: 10px 20px;
+
   border: 1px solid transparent;
   border-radius: 30px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-decoration: none;
 }
-.botoes-verdes{
-  background-color: rgb(60, 195, 58);
-  color: white;
+
+
+.botoes-verdes a{
+  line-height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+
 }
 
-.botoes-verdes:hover{
+.botoes-verdes:hover {
   background-color: #80d751;
   transform: scale(1.05);
-  color:black;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+
 }
 
-.botoes-discretos{
-  transform: scale(1.05);
-   width: 100%;
-   padding:10px;
-  border-radius: 30px;
+.botoes-discretos {
+    transform: scale(1.05);
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
 }
-.botoes-discretos:hover{
-  color:black;
-  transform: scale(1.05);
-  background-color: rgb(248, 247, 197);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  border-radius: 30px;
+
+.botoes-discretos:hover {
+    color: black;
+    transform: scale(1.05);
+    background-color: rgb(248, 247, 197);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 30px;
+
+    
+    
 }
+

@@ -1,97 +1,337 @@
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-left: auto;
-  padding-top: 50px;
-    
-}
- .h1-titulo{
-    padding-bottom:50px;
- }
-.formulario-cartao{
-    width:60%;
+* {
+    margin: 0px;
+    padding: 0px;
+    /*border: 0px solid transparent;*/
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/*inserção de fotos*/
-.largura-143{
-    width:143px;
+body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+
+}
+
+.caixa-info {
+    width: 100%;
+    margin: 60px 0px;
+    line-height: 20px;
+
+
+}
+
+.icones-p {
+    min-height: 12px;
+    width: auto;
+    height: 16px;
+    padding-right: 5px;
+
+}
+
+/*-------------------------------*/
+/*container do card vertical-1*/
+.container-card-vert-1 {
+    width: 100%;
+    padding: 20px 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+
+}
+
+/*------------------------------*/
+
+/*inicio card-vertical-1*/
+
+.grid-card-vertical-1 {
+    max-width: 400px;
+
+    border-radius: 90px;
+    background-color: 1px solid transparent;
+     justify-content: center;
+    align-items: center;
+    grid-row: auto / span 3;
+    display: grid;
+    grid-template-areas:
+        'nome nome nome nome'
+        'whatsapp whatsapp whatsapp foto'
+        'site site site foto'
+        'email  email email foto'
+        'lk lk lk lk'
+        'it it it it '
+        'yf yf yf yf'
+        'graduacao graduacao graduacao graduacao'
+        'cargo cargo cargo cargo'
+        'descricao descricao descricao descricao'
+}
+
+.card-vert-1 {
+    width: 470px;
     margin: auto;
-}
-.formulario-cartao button {
-    width:100%;
-  padding: 14px;
-  background: #e49949;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-}
+    padding: 0px;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(210, 120, 36);
+    border: 3px solid orange;
+    border-radius: 90px;
 
-.linha-formulario {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 16px;
-  
 }
 
-.linha-formulario label {
-  width: 0px;
-  font-weight: normal; /* negrito removido */
+.nome {
+    grid-area: nome;
+    background-color: white;
+    border-radius: 90px 90px 0px 0px;
+    font-weight: bold;
+    align-items: center;
+    font-size: clamp(0.9rem, 2.0vw, 3.0rem);
+    font-weight: bold;
+    /*text-transform: uppercase;*/
+    text-align: center;
+
 }
 
-.linha-formulario input,
-.linha-formulario textarea {
-  width: 100%;
-  padding: 8px;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  justify-content: space-evenly;
+.foto {
+    grid-area: foto;
+    padding: 0px;
+    margin: 0px;
+    justify-content: right;
+    border-radius: 0px 0px 0px 80px;
+    justify-self: end;
+    background-color: transparent;
+    z-index: 6;
 }
 
+.foto-card-v {
+    width: 90% 100%;
+    max-width: 280px;
+    max-height: 350px;
+    object-fit: cover;
+    background-color: transparent;
 
-
-.linha-social {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+    justify-content: space-between;
+    margin: 0px;
+    border: none;
+    position: relative;
+    /*para o logo ficar em cima da foto*/
 }
 
-.logo-social {
-  width: 28px;
-  height: 28px;
+.v-foto-topo {
+    width: 100%;
+    display: inline-block;
+    justify-content: right;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px 0px 0px 80px;
+    background-color: transparent;
+
+
 }
 
-.linha-social input {
-  flex: 1;
-  max-width: 300px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 15px;
+.logo-sobre-foto {
+    position: absolute;
+    /*para o logo ficar em cima da foto*/
+    bottom: 10px;
+    right: 10px;
+    width: 25px;
+    /* ou ajuste conforme o tamanho desejado */
+    height: auto;
+    opacity: 0.9;
+    /* opcional para estilo */
 }
 
-.btn-criar{
-    width:80px;
-    margin: auto;
- 
-  display: block;
-  
-  padding: 12px 24px;
+/*fim foto*/
+.whatsapp {
+    grid-area: whatsapp;
 
+    border: 3px solid white;
 
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom:35px;
 }
-  
+
+h3 {
+    font-size: auto;
+    font-weight: normal;
+}
+
+.email {
+    grid-area: email;
+
+}
+
+.site {
+    grid-area: site;
+    width: 102%;
+    border-radius: 0px 70px 0px 0px;
+}
+
+.lk {
+    grid-area: lk;
+    display: inline-block;
+
+}
+
+.it {
+    grid-area: it;
+
+}
+
+.yf {
+    grid-area: yf;
+    text-align: left;
+
+}
+
+.graduacao {
+    grid-area: graduacao;
+}
+
+.cargo {
+    grid-area: cargo;
+}
+
+.descricao {
+    grid-area: descricao;
+    border-radius: 0px 0px 95px 95px;
+}
+
+.lk .inline-vert,
+.it .inline-vert,
+.yf .inline-vert {
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.linha {
+    background-color: white;
+    padding: 8px 4px;
+    margin: 2px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1px;
+
+}
+
+.linha-transp {
+    background-color: transparent;
+    padding: 10px 5px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
 
+}
+
+.linha-transp-border-bottom {
+    background-color: transparent;
+    padding: 10px 5px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 3px solid white;
+
+}
+
+.inline-verts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.inline-vert {
+    width: 48%;
+    margin: 2px auto;
+    display: inline;
+    border: none;
+    justify-content: center;
+    text-align: center;
+}
+
+.lin-inteira {
+    width: 100%;
+    padding: 25px 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/*final card vertical*/
+/*-------------------------------*/
 
 
+/* botoes para cards horizontal e vertical: download + compartilhar */
+.btn-hv-flex {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    /* Alinha com espaçamento */
+    align-items: center;
+    /* Centraliza verticalmente */
+
+}
+
+/* Cada bloco: Download ou Compartilhar sobre os botoes */
+.btn-hv-inline {
+    display: flex;
+    /* ESSENCIAL: muda de 'inline' para 'flex' */
+    flex-direction: column;
+    /* imagem em cima, botões embaixo */
+    align-items: center;
+    text-align: center;
+    padding:30px 0px;
+    /*width: 280px;  */
+    /* Mantém alinhamento lateral */
+}
+
+/* Imagem acima dos botões */
+.btn-hv-inline img {
+    width: 40px;
+    height: auto;
+
+    /* margin-bottom: 1rem;*/
+}
+
+/* Div que contém botões lado a lado */
+.do-lado-flex {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    /* Impede quebra de linha */
+
+}
+
+/*final botoes*/
+
+/*----@ media-----*/
+/* Em telas menores, mantém o nome com boa leitura */
+@media (max-width: 500px) {
+    .nome .lin-inteira {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .nome .lin-inteira {
+        font-size: 1.5rem;
+    }
+}

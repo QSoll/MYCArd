@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Compartilhar Card · MyCard</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/site.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/botoes.css" />
+        <link rel="stylesheet" href="css/card-vertical.css" />
+    </head>
+
+    <body>
+        <!-- Área onde o header será carregado -->
+		<div id="header-compartilhado"></div>
+
+
+        <div class="tudo"><!-- inicio engloba tudo no body-->
+
+            <!--Inicio card vertical-->
+            <div class="card-vertical-todo">
+
+                <div class="linha-branca">
+                    <h1><img src="imgs/logo_whatsapp.png" class="icon"> Sol Morcillo</h1>
+                </div>
+
+                <div class="linha-branca">
+                    <p><img src="imgs/logo_whatsapp.png" class="icon"> 28 99945-2754</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p><img src="imgs/logo_email.png" class="icon"> sol.morcillo@gmail.com</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p><img src="" class="icon"> www.solmorcillo.com.br</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p><img src="imgs/logo_github.png" class="icon"> github.com/QSol</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p><img src="imgs/logo_facebook.png" class="icon"> facebook.com/SolMorcillo</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p><img src="imgs/logo_instagram.png" class="icon"> instagram.com/sol_morcillo</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p><img src="imgs/logo_youtube.png" class="icon"> youtube.com/@SolMorcillo</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p><img src="imgs/logo_linkedin.png" class="icon"> linkedin.com/in/solmorcillo</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p>🌟 TECNÓLOGO SISTEMAS DE INFORMAÇÃO</p>
+                </div>
+
+                <div class="linha-branca">
+                    <p>🌟 Web designer e developer • Designer de moda • Professora</p>
+                </div>
+
+            </div>
+
+            <!--Final card vertical 1-->
+
+        </div><!-- final engloba tudo no body-->
+
+
+
+
+        <div class="caixa-geral">
+            <main class="container-compartilhar">
+                <section class="mensagem-topo">
+                    <h1 class="text-fumace">Seu MyCArd está pronto!</h1>
+                    <br>
+                    <p>Salve fazendo download e compartilhe</p>
+                    <br />
+                    <p class="aviso-temporario">
+                        ⚠️ Atenção: os cards não são armazenados.
+                    </p>
+                    <br />
+                    <p>Ao fechar esta página, eles serão perdidos.</p>
+                </section>
+
+                <section class="cards-gerados">
+                    <div class="card-vertical-gerado">
+                        <!-- aqui entra o conteúdo gerado do cartão vertical -->
+                    </div>
+
+                    <div class="card-horizontal-gerado">
+                        <!-- aqui entra o conteúdo gerado do cartão horizontal -->
+                    </div>
+                </section>
+
+                <section class="acoes-compartilhar">
+                    <h3 class="text-fumace text-maiusculo">Salva, compartilha e guarda o seu card.</h3>
+                    <br>
+                    <p>Volte sempre !!!</p>
+                    <br>
+                    <button class="btn-acao botoes botoes-verdes">Baixar JPG</button>
+                    <button class="btn-acao botoes botoes-verdes">Baixar PNG</button>
+                    <button class="btn-acao botoes botoes-verdes">Baixar PDF</button>
+                    <button class="btn-acao botoes botoes-verdes">Compartilhar</button>
+                </section>
+
+                <section class="mensagem-final">
+                    <p>
+                        Gostou do seu cartão? Compartilhe o link da nossa página com outras
+                        pessoas 💛
+                    </p>
+                </section>
+            </main>
+        </div>
+
+
+        <script> /*script para header*/
+			fetch("shared/header.html")
+				.then((res) => {
+					if (!res.ok) throw new Error("Erro ao carregar header");
+					return res.text();
+				})
+				.then((html) => {
+					document.getElementById("header-compartilhado").innerHTML = html;
+				})
+				.catch((err) => console.error("Falha no header:", err));
+		</script>
+
+		<!-- Rodapé compartilhado -->
+		<div id="footer-compartilhado"></div>
+		<script>
+			fetch("shared/footer.html")
+				.then((res) => {
+					if (!res.ok) throw new Error("Erro ao carregar footer");
+					return res.text();
+				})
+				.then((html) => {
+					document.getElementById("footer-compartilhado").innerHTML = html;
+				})
+				.catch((err) => console.error("Falha no footer:", err));
+		</script>
+
+        <!-- Importar scripts (jsPDF, html2canvas, etc.) se necessário -->
+        <!-- Você pode incluir: html2canvas, jsPDF, e funções personalizadas aqui -->
+        <script src="js/card.js"></script>
+    </body>
+
+</html>

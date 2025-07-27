@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Compartilhar Card · MyCard</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+		<link rel="stylesheet" href="css/site.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="css/botoes.css" />
+		<link rel="stylesheet" href="css/card-horizontal.css" />
+
+	</head>
+
+	<body>
+		<!-- Área onde o header será carregado -->
+		<div id="header-compartilhado"></div>
+
+
+		<div class="geral"><!-- inicio cards horizontal 1 e horizontal 1-->
+
+			<!--card horizontal 1 com campos dinamicos já preparado para receber dados-->
+			<div class="container-card-horiz-1">
+				<div class="grid-card-horizontal-1">
+
+					<div class="foto-h-1">
+						<div class="h-1-foto-topo">
+							<img class="foto-card-h-1" id="foto-perfil-h-1" src="" alt="Foto de perfil">
+							<img class="h-1-logo-sobre-foto" src="imgs/logo_MyCArd.png" alt="Logo sobre foto">
+						</div>
+					</div>
+
+					<div class="nome-h-1 linha-h-1">
+						<h1 id="usuario-nome-h-1"></h1>
+					</div>
+					<div class="whatsapp-h-1 linha-h-1">
+						<img class="icones-p" src="imgs/logo_whatsapp.png" alt="">
+						<span id="usuario-whatsapp-h-1"></span>
+					</div>
+					<div class="site-h-1 linha-h-1">
+						<img class="icones-p" src="" alt="">
+						<span id="usuario-site-h-1"></span>
+					</div>
+					<div class="email-h-1 linha-h-1-transp">
+						<h4 id="usuario-email-h-1"></h4>
+					</div>
+
+					<!-- Redes sociais com IDs específicos para controle JS -->
+					<div class="lk-h-1 linha-h-1">
+						<div class="inline-horiz">
+							<img class="icones-p" id="icone-linkedin-h-1" src="imgs/logo_linkedin.png" alt="">
+							<span id="usuario-linkedin-h-1"></span>
+						</div>
+					</div>
+					<div class="gt-h-1 linha-h-1">
+						<div class="inline-horiz">
+							<img class="icones-p" id="icone-github-h-1" src="imgs/logo_github.png" alt="">
+							<span id="usuario-github-h-1"></span>
+						</div>
+					</div>
+					<div class="in-h-1 linha-h-1">
+						<div class="inline-horiz">
+							<img class="icones-p" id="icone-instagram-h-1" src="imgs/logo_instagram.png" alt="">
+							<span id="usuario-instagram-h-1"></span>
+						</div>
+					</div>
+					<div class="th-h-1 linha-h-1">
+						<div class="inline-horiz">
+							<img class="icones-p" id="icone-threads-h-1" src="imgs/logo_threads.png" alt="">
+							<span id="usuario-threads-h-1"></span>
+						</div>
+					</div>
+					<div class="yo-h-1 linha-h-1">
+						<div class="inline-horiz">
+							<img class="icones-p" id="icone-youtube-h-1" src="imgs/logo_youtube.png" alt="">
+							<span id="usuario-youtube-h-1"></span>
+						</div>
+					</div>
+					<div class="fa-h-1 linha-h-1">
+						<div class="inline-horiz">
+							<img class="icones-p" id="icone-facebook-h-1" src="imgs/logo_facebook.png" alt="">
+							<span id="usuario-facebook-h-1"></span>
+						</div>
+					</div>
+
+					<div class="graduacao-h-1 linha-h-1">
+						<h3 id="usuario-graduacao-h-1"></h3>
+					</div>
+					<div class="cargo-h-1 linha-h-1 linha-transp-h-1">
+						<div id="usuario-cargo-h-1"></div>
+					</div>
+					<div class="descricao-h-1 linha-h-1 lin-inteira-h-1">
+						<div id="usuario-descricao-h-1"></div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- Botões download e compartilhar -->
+			<div class="btn-hv-flex">
+				<!-- download -->
+				<div id="download" class="btn-hv-inline">
+					<div><img src="imgs/logo_download.png"></div>
+					<div class="do-lado-flex">
+						<button id="card-salvar-jpg-vertical-1" class="botoes botoes-verdes do-lado-inline">jpg</button>
+						<button id="card-salvar-pdf-vertical-1" class="botoes botoes-verdes">pdf</button>
+					</div>
+				</div>
+
+				<!-- compartilhar -->
+				<div class="btn-hv-inline">
+					<div><img src="imgs/logo_compartilhar.png"></div>
+					<div>
+						<button id="card-compartilhar-horizontal-1" class="botoes botoes-verdes">Compartilhar</button>
+					</div>
+				</div>
+			</div>
+			<!--final card horizontal 1 já preparado para receber dados-->
+
+			<!----_______________________-->
+
+
+
+			<!--_________________________________________________-->
+
+			<div class="caixa-info">
+				<main class="container-compartilhar">
+					<section class="mensagem-topo">
+						<h1 class="text-fumace">Seu MyCArd está pronto!</h1>
+						<br>
+						<p class="texto-destacado">Salve fazendo download e compartilhe</p>
+						<br />
+						<p class="aviso-temporario">
+							⚠️ Atenção: os cards não são armazenados.
+						</p>
+						<br />
+						<p class="texto-destacado">Ao fechar esta página, eles serão perdidos.</p><br>
+					</section>
+
+					<section class="cards-gerados">
+						<div class="card-horizontal-gerado">
+							<!-- aqui entra o conteúdo gerado do cartão horizontal -->
+						</div>
+
+						<div class="card-horizontal-gerado">
+							<!-- aqui entra o conteúdo gerado do cartão horizontal -->
+						</div>
+					</section>
+
+					<section class="acoes-compartilhar">
+						<h3 class="text-fumace text-maiusculo">Salva, compartilha e guarda o seu card.</h3>
+						<br>
+						<p>Volte sempre !!!</p>
+						<br>
+
+					</section>
+
+					<section class="mensagem-final">
+						<p>
+							Gostou do seu cartão? Compartilhe o link da nossa página com outras
+							pessoas 💛
+						</p>
+					</section>
+				</main>
+			</div>
+			<!--___________________________________________________-->
+
+		</div><!--final caixa geral - cards horizontal-1 e card horizontal-1-->
+
+
+		<!--abaixo scripts header, rodape-->
+
+
+		<!--___________________Scripts - shared____________________-->
+
+		<script> /*script para header*/
+			fetch("shared/header.html")
+				.then((res) => {
+					if (!res.ok) throw new Error("Erro ao carregar header");
+					return res.text();
+				})
+				.then((html) => {
+					document.getElementById("header-compartilhado").innerHTML = html;
+				})
+				.catch((err) => console.error("Falha no header:", err));
+		</script>
+
+		<!-- Rodapé compartilhado -->
+		<div id="footer-compartilhado"></div>
+		<script>/*script de compartilhamento do footer*/
+			fetch("shared/footer.html")
+				.then((res) => {
+					if (!res.ok) throw new Error("Erro ao carregar footer");
+					return res.text();
+				})
+				.then((html) => {
+					document.getElementById("footer-compartilhado").innerHTML = html;
+				})
+				.catch((err) => console.error("Falha no footer:", err));
+		</script>
+		<!--___________________Scripts____________________-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+		<script src="js/compartilhar-card-vertical-horizontal.js" defer></script>
+		<script src="js/cartao.js" defer></script>
+		<script src="js/salvar-dados-form.js" defer></script>
+		<script src="js/salvar-imgs.js" defer></script>
+
+
+
+
+	</body>
+
+</html>

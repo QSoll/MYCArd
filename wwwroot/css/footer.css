@@ -7,13 +7,21 @@ footer {
   width: 100%;
   height: auto;
   line-height: 27px;
+  margin-top:40px;
 }
-
+.icones-m {
+    min-height: 30px;
+    width: auto;
+    height: 30px;
+    padding-right: 5px;
+    
+}
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
+  
 }
 .apresentacao {
   display:block;

@@ -1,125 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 	<head>
 		<meta charset="UTF-8" />
 		<title>Criar cartão</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+
 		<link rel="stylesheet" href="css/header.css" />
 		<link rel="stylesheet" href="css/botoes.css" />
 		<link rel="stylesheet" href="css/footer.css" />
 		<link rel="stylesheet" href="css/site.css" />
 		<link rel="stylesheet" href="css/card-vertical.css" />
+		<link rel="stylesheet" href="css/card-horizontal.css" />
+		<link rel="stylesheet" href="css/cards.css" />
+		<link rel="stylesheet" href="css/preencher-cartao.css" />
 	</head>
+
 	<body>
 		<header class="banner-tropical">
 			<div class="banner-container">
-				<img
-					src="imgs/banner1.jpg"
-					alt="Banner MyCArd"
-					class="banner-topo banner-card"
-				/>
+				<img src="imgs/banner1.jpg" alt="Banner MyCArd" class="banner-topo banner-card" />
 			</div>
 
 			<nav class="menu-navegacao">
 				<a href="/index.html " class="botoes botoes-verdes">Home</a>
-				<a href="/preencher-cartao.html" class="botoes botoes-verdes"
-					>Criar Card</a
-				>
+				<a href="/preencher-cartao.html" class="botoes botoes-verdes">Criar Card</a>
 			</nav>
 		</header>
 
-		<main class="container">
-			<form class="formulario-cartao">
-				<h1 class="h1-titulo">Preencha seu Cartão</h1>
-				<p>Escolha uma foto do seu dispositivo</p>
-				<br />
+		<div class="container-cartao">
+			<h1 id="titulo-formulario" title="Preencha as informações para gerar seu card">Preencher seu Card Vertical
+			</h1>
 
-				<div class="linha-formulario largura-143">
-					<label for="avatar"> </label>
-					<input type="file" id="avatar" name="avatar" accept="image/*" />
-				</div>
-				<br />
+			<form id="formulario" class="formulario-cartao" title="Formulário para criar seu card personalizado">
 
-				<div class="linha-formulario">
-					<label for="nome"> </label>
-					<input
-						type="text"
-						id="nome"
-						name="nome"
-						placeholder="Seu nome"
-						required
-					/>
+				<img id="preview-avatar" src="" alt="Prévia do avatar"
+					style="display:none; max-width: 150px; margin-top: 10px;" />
+
+
+
+				<!-- Avatar -->
+				<div class="form-group">
+					<label for="avatar" title="Escolha uma imagem para o avatar">Escolha seu avatar:</label>
+					<input type="file" id="avatar" name="avatar" accept="image/*"
+						title="Selecione uma imagem do seu dispositivo">
 				</div>
 
-				<div class="linha-formulario">
-					<label for="bio"> </label>
-					<textarea
-						id="bio"
-						name="bio"
-						placeholder="Descrição, bio, graduação, cargo, etc"
-					></textarea>
+				<!-- Cor de fundo -->
+				<div class="form-group">
+					<label for="cor-fundo" title="Selecione uma cor para o fundo do card">Cor do fundo:</label>
+					<input type="color" id="cor-fundo" name="cor-fundo" value="#ffffff"
+						title="Clique para escolher a cor">
 				</div>
 
-				<div class="linha-formulario">
-					<label for="site"></label>
-					<input
-						type="url"
-						id="Url do seu site ou blog"
-						name="site"
-						placeholder="Seu site ou blog https://solmorcillo.com.br"
-					/>
+				<!-- Dados principais -->
+				<div class="form-group">
+					<label for="nome" title="Informe seu nome completo">Nome completo:</label>
+					<input type="text" id="nome" name="nome" autocomplete="name" title="Digite seu nome">
 				</div>
 
-				<div class="linha-formulario">
-					<label for="email"> </label>
-					<input
-						type="email"
-						id="email"
-						name="email"
-						placeholder="Seu melhor e-mail"
-					/>
+				<div class="form-group">
+					<label for="whatsapp" title="Número de WhatsApp com DDD">WhatsApp:</label>
+					<input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" title="Ex: (27) 99999-0000">
 				</div>
 
-				<div class="linha-formulario">
-					<img
-						src="imgs/logo_linkedin.jpg"
-						alt="LinkedIn"
-						class="logo-social"
-					/>
-					<input type="text" name="linkedin" placeholder="Seu Linkedin" />
+				<div class="form-group">
+					<label for="site" title="Seu site ou portfólio online">Site pessoal:</label>
+					<input type="text" id="site" name="site" autocomplete="url" title="Informe um link válido">
 				</div>
 
-				<div class="linha-formulario">
-					<img
-						src="imgs/logo_instagram.png"
-						alt="Instagram"
-						class="logo-social"
-					/>
-					<input type="text" name="instagram" placeholder="Seu Instagram" />
-				</div>
-				<div class="linha-formulario">
-					<img src="imgs/logo_youtube.png" alt="Youtube" class="logo-social" />
-					<input type="text" name="youtube" placeholder="Seu Youtube" />
+				<div class="form-group">
+					<label for="email" title="Seu endereço de email">Email:</label>
+					<input type="email" id="email" name="email" autocomplete="email" title="exemplo@dominio.com">
 				</div>
 
-				<div class="linha-formulario">
-					<img src="imgs/logo_github.png" alt="GitHub" class="logo-social" />
-					<input type="text" name="github" placeholder="Seu Github" />
+				<div class="form-group">
+					<label for="linkedin" title="Link para seu perfil no LinkedIn">LinkedIn:</label>
+					<input type="text" id="linkedin" name="linkedin" autocomplete="url"
+						title="Cole o link do seu perfil">
 				</div>
 
-				<div class="linha-formulario">
-					<img
-						src="imgs/logo_whatsapp.png"
-						alt="WhatsApp"
-						class="logo-social"
-					/>
-					<input type="tel" name="whatsapp" placeholder="(00) 0000-0000" />
+				<div class="form-group">
+					<label for="github" title="Link para seu perfil no GitHub">GitHub:</label>
+					<input type="text" id="github" name="github" autocomplete="url"
+						title="Cole o link do seu repositório ou perfil">
 				</div>
 
-				<div class="btn-criar">
-					<button type="submit" class="botoes botoes-verdes">CRIAR</button>
+				<div class="form-group">
+					<label for="instagram" title="Link para seu perfil no Instagram">Instagram:</label>
+					<input type="text" id="instagram" name="instagram" autocomplete="url"
+						title="Cole o link do seu perfil">
 				</div>
+
+				<div class="form-group">
+					<label for="threads" title="Link para seu perfil no Threads">Threads:</label>
+					<input type="text" id="threads" name="threads" autocomplete="url" title="Cole o link do seu perfil">
+				</div>
+
+				<div class="form-group">
+					<label for="youtube" title="Link para seu canal no YouTube">YouTube:</label>
+					<input type="text" id="youtube" name="youtube" autocomplete="url" title="Cole o link do seu canal">
+				</div>
+
+				<div class="form-group">
+					<label for="facebook" title="Link para seu perfil no Facebook">Facebook:</label>
+					<input type="text" id="facebook" name="facebook" autocomplete="url"
+						title="Cole o link do seu perfil">
+				</div>
+
+				<div class="form-group">
+					<label for="graduacao" title="Curso ou formação">Graduação:</label>
+					<input type="text" id="graduacao" name="graduacao" autocomplete="off"
+						title="Ex: Administração, Engenharia de Software">
+				</div>
+
+				<div class="form-group">
+					<label for="cargo" title="Seu cargo ou profissão atual">Cargo:</label>
+					<input type="text" id="cargo" name="cargo" autocomplete="organization-title"
+						title="Ex: Desenvolvedor Front-End">
+				</div>
+
+				<div class="form-group">
+					<label for="descricao" title="Informações adicionais sobre você">Descrição pessoal:</label>
+					<textarea id="descricao" name="descricao" autocomplete="off"
+						title="Fale um pouco sobre você, hobbies, interesses, etc"></textarea>
+				</div>
+
+				<div class="form-group">
+					<button id="botao-visualizar" type="button" onclick="salvarDadosEVisualizar()"
+						class="botoes botoes-verdes" title="Clique para visualizar seu card preenchido">
+						Visualizar Card
+					</button>
+				</div>
+
 			</form>
-		</main>
+		</div>
+
+
+
+
+
 
 		<!-- Rodapé compartilhado -->
 
@@ -136,129 +158,42 @@
 				.catch((err) => console.error("Falha no footer:", err));
 		</script>
 
-		<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-
-		<script>
-			document
-				.getElementById("cartao-form")
-				.addEventListener("submit", function (e) {
-					e.preventDefault();
-
-					const formData = new FormData(this);
-					const nome = formData.get("nome") || "Sem nome";
-					const bio = formData.get("bio") || "";
-					const email = formData.get("email") || "";
-					const github = formData.get("github") || "";
-					const linkedin = formData.get("linkedin") || "";
-					const instagram = formData.get("instagram") || "";
-					const whatsapp = formData.get("whatsapp") || "";
-					const corTopo = formData.get("corTopo") || "#f0f0f0";
-					const corBase = formData.get("corBase") || "#ffffff";
-					const avatar = formData.get("avatar");
-
-					const preview = document.getElementById("cartao-preview");
-					preview.innerHTML = `
-        <div style="background:${corTopo}; padding:20px; border-radius:12px 12px 0 0; text-align:center;">
-          <div id="avatar-preview"></div>
-          <h2 style="margin-top:10px;">${nome}</h2>
-        </div>
-        <div style="background:${corBase}; padding:20px; border-radius:0 0 12px 12px;">
-          ${bio ? `<p><em>${bio}</em></p>` : ""}
-          ${email ? `<p>Email: <a href="mailto:${email}">${email}</a></p>` : ""}
-          ${
-						github
-							? `<p><img src="/imgs/icon-github.png" style="width:18px;"> <a href="${github}" target="_blank">GitHub</a></p>`
-							: ""
-					}
-          ${
-						linkedin
-							? `<p><img src="/imgs/icon-linkedin.png" style="width:18px;"> <a href="${linkedin}" target="_blank">LinkedIn</a></p>`
-							: ""
-					}
-          ${
-						instagram
-							? `<p><img src="/imgs/icon-instagram.png" style="width:18px;"> <a href="${instagram}" target="_blank">Instagram</a></p>`
-							: ""
-					}
-          ${
-						whatsapp
-							? `<p><img src="/imgs/icon-whatsapp.png" style="width:18px;"> <a href="${whatsapp}" target="_blank">WhatsApp</a></p>`
-							: ""
-					}
-          <div style="margin-top: 16px;">
-            <button onclick="copiarCartao()" class="botoes-verdes">Copiar como Assinatura</button>
-            <button onclick="exportarImagem()" class="botoes-verdes">Exportar como Imagem</button>
-            <button onclick="redirecionar()" class="botoes-verdes">Avançar para Compartilhar</button>
-          </div>
-        </div>
-      `;
-
-					if (avatar && avatar.size > 0) {
-						const reader = new FileReader();
-						reader.onload = function (event) {
-							document.getElementById("avatar-preview").innerHTML = `
-            <img src="${event.target.result}" class="avatar" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:4px solid #0077cc; box-shadow:0 0 8px rgba(0,0,0,0.1);">
-          `;
-						};
-						reader.readAsDataURL(avatar);
-					}
-				});
-
-			function copiarCartao() {
-				const html = document.getElementById("cartao-preview").innerHTML;
-				const temp = document.createElement("textarea");
-				temp.value = html;
-				document.body.appendChild(temp);
-				temp.select();
-				document.execCommand("copy");
-				document.body.removeChild(temp);
-				alert("Cartão copiado! Cole no Gmail ou onde desejar.");
-			}
-
-			function exportarImagem() {
-				const cartao = document.getElementById("cartao-preview");
-				html2canvas(cartao).then((canvas) => {
-					const link = document.createElement("a");
-					link.download = "meu-cartao.png";
-					link.href = canvas.toDataURL("image/png");
-					link.click();
-				});
-			}
-
-			function redirecionar() {
-				window.location.href = "/compartilhar-card.html";
+		<script>/*script mostrar cor escolhida*/
+			function mostrarCor(cor) {
+				document.getElementById('cor-preview').style.backgroundColor = cor;
 			}
 		</script>
 
 		<script>
-			document
-				.querySelector(".formulario-cartao")
-				.addEventListener("submit", function (e) {
-					e.preventDefault();
+			document.getElementById('avatar').addEventListener('change', function (event) {
+				const preview = document.getElementById('preview-avatar');
+				const file = event.target.files[0];
 
-					sessionStorage.setItem("nome", document.getElementById("nome").value);
-					sessionStorage.setItem("bio", document.getElementById("bio").value);
-					sessionStorage.setItem(
-						"email",
-						document.getElementById("email").value
-					);
-					sessionStorage.setItem(
-						"telefone",
-						document.getElementById("telefone").value
-					);
-
-					const avatarInput = document.getElementById("avatar");
-					if (avatarInput.files[0]) {
-						const reader = new FileReader();
-						reader.onload = function () {
-							sessionStorage.setItem("avatar", reader.result);
-							window.location.href = "compartilhar-card.html";
-						};
-						reader.readAsDataURL(avatarInput.files[0]);
-					} else {
-						window.location.href = "compartilhar-card.html";
-					}
-				});
+				if (file) {
+					const reader = new FileReader();
+					reader.onload = function (e) {
+						preview.src = e.target.result;
+						preview.style.display = 'block'; // Mostra o preview
+					};
+					reader.readAsDataURL(file);
+				} else {
+					preview.src = '';
+					preview.style.display = 'none'; // Esconde se não tiver imagem
+				}
+			});
 		</script>
+
+
+
+
+
+		<script src="js/cartao.js" defer></script>
+		<script src="js/salvar-dados-form.js" defer></script>
+		<script src="js/salvar-imgs.js" defer></script>
+		<script src="js/compartilhar-card-vertical-horizontal.js" defer></script>
+
+
+
 	</body>
+
 </html>
