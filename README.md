@@ -41,7 +41,6 @@ Dica: usar como assinatura em e-mail.
 - JS
 - Docker
   
-
 ![Dependências externas](https://img.shields.io/badge/Dependências&ensp;Externas-FFCC01?style=for-the-badge&logo=Dependências&ensp;Externas&logoColor=white)
 
 - html2canvas — biblioteca JavaScript para capturar DOM como imagem
