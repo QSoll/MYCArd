@@ -42,9 +42,11 @@ Dica: usar como assinatura em e-mail.
 - Docker
   
 
-![Dependências externas](https://img.shields.io/badge/Dependências&ensp;Externas-FFCC01?style=for-the-badge&logo=Dependências&ensp;Externas&logoColor=white) html2canvas — biblioteca JavaScript para capturar DOM como imagem
+![Dependências externas](https://img.shields.io/badge/Dependências&ensp;Externas-FFCC01?style=for-the-badge&logo=Dependências&ensp;Externas&logoColor=white)
+
+- html2canvas — biblioteca JavaScript para capturar DOM como imagem
 
 
-<img src="https://solmorcillo.com.br/imgs_public/logo_SM.jpg">
+<img src="https://solmorcillo.com.br/imgs_public/logo_SM.jpg" widith="100px" height="210px">
 
 <img src="https://solmorcillo.com.br/imgs_public/MyCArd_banner1.jpg">
