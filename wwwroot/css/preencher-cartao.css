@@ -8,6 +8,14 @@ input[type="color"] {
   background-color: white;
   padding: 0;
 }
+label[for="logo-principal"],
+label[for^="logo"],
+label[for^="coluna"] {
+  display: none;
+}
+
+
+/**/
 #preview-avatar {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -16,18 +24,21 @@ input[type="color"] {
   display: block;
   margin: 10px auto;
 }
+#preview-foto img {
+  max-width: 120px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+
 
 /* Espaçamento abaixo do título */
 /* Container centralizado */
 .container-cartao {
-  max-width: 600px;
-  margin: 0 auto; /* centraliza horizontalmente */
-  padding: 20px;
-}
 
-/* Título */
-/* Container geral centralizado */
-.container-cartao {
+  margin: 0 auto;
+  /* centraliza horizontalmente */
+  padding: 20px;
   max-width: 650px;
   margin: 40px auto;
   padding: 20px;
@@ -59,13 +70,105 @@ input[type="color"] {
   resize: vertical;
 }
 
+.form-group {
+  text-align: left;
+  justify-content: left;
+}
+
 /* Botão centralizado e estilizado */
 
 
-.centraliza-botoes{
+.centraliza-botoes {
 
   width: 180px;
   margin: 10px auto;
   justify-content: center;
- 
+
+}
+
+.linha-user-opcoes {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.linha-user-opcoes button.adicionar-btn {
+  margin-left: auto;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.botao-adiciona-linha {
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  padding-left: 10px;
+  width: 50px;
+  height: 40px;
+  background-color: aquamarine;
+  color: black;
+  align-items: center;
+  align-items: center;
+
+  border: 1px solid rgb(93, 172, 93);
+  border-radius: 20px;
+  justify-content: left;
+}
+
+.adicina-linha-text {
+  text-align: center;
+  padding-left: 25px;
+}
+
+.linha-user-opcoes select.selector-mini {
+  width: 80px;
+  padding: 6px;
+}
+
+.linha-user-opcoes input[type="text"]#nome {
+  flex: 1;
+  padding: 6px;
+  font-size: 1em;
+}
+
+/**/
+/* Preview do degradê */
+#degrade-preview {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Grupo de cor individual */
+.grupo-cor {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Bloco dinâmico de linhas */
+.linha-dinamica {
+  border: 1px dashed #ddd;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.linha-user-opcoes input,
+.linha-user-opcoes select {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
 }

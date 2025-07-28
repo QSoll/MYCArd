@@ -3,7 +3,7 @@
     padding: 0px;
     /*border: 0px solid transparent;*/
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 body {
@@ -11,8 +11,13 @@ body {
     padding: 0px;
     margin: 0px;
     text-align: center;
-
+    
+  font-family: 'Comfortaa', sans-serif;
 }
+
+
+
+
 
 .caixa-info {
     width: 100%;

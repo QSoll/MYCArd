@@ -4,12 +4,18 @@
     padding: 0;
 }
 html,
-
 body {
-    font-family: Arial;
-    background: #f7f7f7;
+    font-family: 'Comfortaa', sans-serif;
+    font-size:small;
+
+  letter-spacing: 0.5px; /* Ajuste suave pro espaçamento*/
+    background:white;
 
 }
+.imagem_modelos{
+    width: 90%;
+}
+    
 
 a {
     text-decoration: none;
@@ -96,9 +102,16 @@ a {
     object-fit: contain;
 }
 
-.img-media {
-    width: 100%;
-    height: auto;
+.img-media-height {
+    width:auto;
+    height: 190px;
+    justify-content: center;
+    align-items: center;
+
+}
+.img-media2 {
+    width: auto;
+    height: 500px;
     justify-content: center;
     align-items: center;
     text-align: center;

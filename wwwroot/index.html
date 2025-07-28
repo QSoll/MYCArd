@@ -5,13 +5,19 @@
 		<meta charset="UTF-8" />
 		<title>MyCard · Sua Identidade Digital</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/site.css?v=2.1.0">
 
-		<link rel="stylesheet" href="css/site.css" />
-		<link rel="stylesheet" href="css/header.css" />
-		<link rel="stylesheet" href="css/footer.css" />
-		<link rel="stylesheet" href="css/botoes.css" />
-		<link rel="stylesheet" href="css/card-vertical.css" />
+
+		<link rel="stylesheet" href="css/botoes.css" />		
 		<link rel="stylesheet" href="css/card-horizontal.css" />
+		<link rel="stylesheet" href="css/card-vertical.css" />
+		<link rel="stylesheet" href="css/cards.css" />
+		<link rel="stylesheet" href="css/cores-cards.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/preencher-cartao.css" />
+		<link rel="stylesheet" href="css/site.css" />
 	</head>
 
 	<body>
@@ -32,8 +38,9 @@
 			</p>
 		</div>
 
-		<div>
-			<img src="imgs/modelo-cards-horizontal-vertical.jpg" alt="cards vertical e horizontal" class="img-media">
+		<div class="imagem_modelos">
+			<img src="imgs/img1orange_card-v-1.png" alt="cards vertical e horizontal" class="imagem_modelos">
+			<img src="imgs/img1red_card-h-1.png" alt="cards vertical e horizontal" class="imagem_modelos">
 		</div>
 
 		<script> /*script para header*/
@@ -48,7 +55,7 @@
 				.catch((err) => console.error("Falha no header:", err));
 		</script>
 
-		<!-- Rodapé compartilhado -->
+		<!-- Rodapé compartilhado _________-->
 		<div id="footer-compartilhado"></div>
 		<script>
 			fetch("shared/footer.html")
@@ -61,6 +68,9 @@
 				})
 				.catch((err) => console.error("Falha no footer:", err));
 		</script>
+		<!--final footer___________________-->
+
+		
 	</body>
 
 </html>

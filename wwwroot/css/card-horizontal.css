@@ -3,12 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 body {
     width: 100%;
     text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+
 }
 
 /*
@@ -256,7 +258,7 @@ body {
 
 }
 
-/* Cada bloco: Download ou Compartilhar sobre os botoes */
+/* Cada bloco: Download, Compartilhar, preview, criar, sobre os botoes */
 .btn-hv-inline {
     display: flex;
     /* ESSENCIAL: muda de 'inline' para 'flex' */

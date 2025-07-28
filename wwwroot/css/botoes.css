@@ -6,19 +6,23 @@
   align-items: center;
   background-color: rgb(60, 195, 58);
   color: white;
-  padding:20px;
+  padding:15px 5px;
   margin: 10px;
   gap:20px;
+  font-family: 'Comfortaa', sans-serif;
 
 
   border: 1px solid transparent;
   border-radius: 30px;
-  font-size: 1rem;
+
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-decoration: none;
+  width: 120px;
+  height: 70px;
+  margin:auto;
 }
 
 
@@ -36,6 +40,7 @@
   background-color: #80d751;
   transform: scale(1.05);
   color: black;
+  font-weight: bolder;
   display: flex;
   justify-content: center;
   align-items: center;

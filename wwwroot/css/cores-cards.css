@@ -1,0 +1,18 @@
+/* linha colorida com dupla de cores */
+.linha-cor-dupla-v-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.cor-esquerda-v-1 {
+  width: 50%;
+  height: 40px;
+  background-color: #FFCC66; /* por exemplo */
+}
+
+.cor-direita-v-1 {
+  width: 50%;
+  height: 40px;
+  background-color: #3399FF;
+}
