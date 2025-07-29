@@ -1,6 +1,6 @@
 <img src="https://solmorcillo.com.br/imgs_public/MyCArd_banner1.jpg">
 
-CARTÃODIGITAL PERSONALIZADO- <a href="https://solmorcillo.com.br/MyCArd/wwwroot/index.html">Site MyCArd - Acesse para criar o seu cartão vertical e/ou horizontal, na cor que quiser.</a>
+CARTÃO DIGITAL PERSONALIZADO- <a href="https://solmorcillo.com.br/MyCArd/wwwroot/index.html">Site MyCArd - Acesse para criar o seu cartão vertical e/ou horizontal, na cor que quiser.</a>
 
 Projeto web responsivo para criar, visualizar e salvar cartões digitais em formato PNG com fundo transparente.
 
