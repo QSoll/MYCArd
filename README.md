@@ -46,6 +46,47 @@ Dica: usar como assinatura em e-mail.
 - html2canvas — biblioteca JavaScript para capturar DOM como imagem
 
 
+
+![Proximos Aprimoramentos](https://img.shields.io/badge/Proximos&ensp;Aprimoramentos-FFCC01?style=for-the-badge&logo=Proximos&ensp;Aprimoramentos&logoColor=white)
+
+
+* 1- Novos modelos verticais, horizontais e oval
+
+* 2- Seletor de escolha de logotipo de redes sociais e pessoais
+
+* 3- Criação de novas linhas
+
+* 4- Escolha de cor degradê
+
+* 5- 
+
+• 1-Botão "Salvar como HTML"
+
+Abrir no navegador, publicar no GitHub Pages ou mandar por e-mail.
+ 
+
+• 2- Exportar como JSON
+
+Salvar os dados preenchidos como .json para reusar depois, importar num mural coletivo ou carregar via backend.
+
+• 3- Estilo visual personalizável
+
+Escolha de cor, tema ou imagem de fundo. Exemplo: tema claro, escuro, vintage… tudo com um clique.
+
+• 4- Modo "assinatura para Gmail"
+
+Gerar um bloco HTML pronto pra colar nas configurações de assinatura do Gmail 
+
+• 5- Versão mobile otimizada
+
+Testar o cartão e formulário em celular — ajustar tamanhos, fontes e botões pra toques.
+
+
+
 <img src="https://solmorcillo.com.br/imgs_public/logo_SM.jpg" widith="100px" height="210px">
 
 <img src="https://solmorcillo.com.br/imgs_public/MyCArd_banner1.jpg">
+
+html2canvas — biblioteca JavaScript para capturar DOM como imagem
+
+
